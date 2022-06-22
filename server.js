@@ -4,9 +4,12 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 dotenv.config();
-const baseUrl = process.env.BASE_URL; 
+const baseUrl = process.env.BASE_URL;  
+console.log('baseUrl = ' + baseUrl)
 const mode = process.env.MODE; 
+console.log('mode = ' + mode)
 const port = process.env.PORT; 
+console.log('port = ' + port)
 
 const app = express();
 const url = mode === 'development' ? `${baseUrl}:${port}` : baseUrl;
